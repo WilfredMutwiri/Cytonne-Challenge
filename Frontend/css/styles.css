@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #4caf50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+.panel {
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  flex: 1 1 300px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.panel h2 {
+  margin-top: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+table th {
+  background: #f0f0f0;
+}
+button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+button:hover {
+  background: #3498db;
+}
+form label {
+  display: block;
+  margin-top: 10px;
+}
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+}
+#logoutBtn {
+  display: inline-block;
+  background-color: #e74c3c; /* red tone */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#logoutBtn:hover {
+  background-color: #c0392b; /* darker red on hover */
+  transform: scale(1.05);
+}
+
+#logoutBtn:active {
+  background-color: #a93226; /* even darker when clicked */
+  transform: scale(0.98);
+}
+#welcomeTxt {
+  text-align: center;
+  font-size: 1.2em;
+  color: #333;
+  margin: 20px 0;
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#welcomeTxt span {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* user dashboard */
+.container {
+  padding: 20px;
+  width: 100%;
+}
+.task {
+  background: white;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  margin: auto;
+}
+.task select {
+  margin-top: 8px;
+  padding: 5px;
+}
+.btn-orange {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-red {
+  background-color: #e53935;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-orange:hover {
+  background-color: #fb8c00;
+}
+
+.btn-red:hover {
+  background-color: #c62828;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TMS - Admin Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <a id="logoutBtn" href="/Backend/logout.php">Logout</a>
+  </header>
+
+  <p id="welcomeTxt">Hello @<span id="user-name"></span></p>
+
+  <div class="container">
+    <!-- All Users -->
+    <div class="panel" style="flex-basis: 100%;">
+      <h2>All Users</h2>
+      <table id="users-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Populated by JS -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Create New User -->
+    <div class="panel">
+      <h2>Create New User</h2>
+      <form id="create-user-form">
+        <label>
+          Name:
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Password:
+          <input type="password" name="password" required />
+        </label>
+        <label>
+          Role:
+          <select name="role" required>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </label>
+        <button type="submit">Create User</button>
+      </form>
+    </div>
+
+    <!-- Create New Task -->
+    <div class="panel">
+      <h2>Create New Task</h2>
+      <form id="create-task-form">
+        <label>
+          Title:
+          <input type="text" name="title" required />
+        </label>
+        <label>
+          Description:
+          <textarea name="description"></textarea>
+        </label>
+        <label>
+          Deadline:
+          <input type="date" name="deadline" required />
+        </label>
+        <label>
+          Assign to User:
+          <select name="user_id" required>
+            <!-- Populated by JS -->
+          </select>
+        </label>
+        <button type="submit">Create Task</button>
+      </form>
+    </div>
+
+    <!-- All Tasks -->
+    <div class="panel" style="flex-basis: 100%;">
+      <h2>All Tasks</h2>
+      <table id="tasks-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Deadline</th>
+            <th>Status</th>
+            <th>Assigned User</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Filled by JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- JS Section -->
+  <script src="js/admin_dashboard.js"></script>
+</body>
+</html>
